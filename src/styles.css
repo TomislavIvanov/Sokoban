@@ -1,0 +1,101 @@
+    .table
+    {
+        display: table;
+    }
+    
+    .row
+    {
+        display: table-row;
+    }
+    
+    .cell
+    {
+        width: 32px;
+        height: 32px;
+        display: table-cell;
+        border-width: thin;
+    }
+
+    div.snakeBody {
+        background-color: green;
+    }
+
+    div.wall {
+        background-color: grey;
+    }
+    
+    div.food {
+        background-color: red;
+    }
+	
+	.btn {
+	  background: #3498db;
+	  background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+	  background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+	  background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+	  background-image: -o-linear-gradient(top, #3498db, #2980b9);
+	  background-image: linear-gradient(to bottom, #3498db, #2980b9);
+	  -webkit-border-radius: 28;
+	  -moz-border-radius: 28;
+	  border-radius: 28px;
+	  font-family: Arial;
+	  color: #ffffff;
+	  font-size: 20px;
+	  padding: 10px 20px 10px 20px;
+	  text-decoration: none;
+	}
+
+	.btn:hover {
+	  background: #3cb0fd;
+	  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+	  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+	  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+	  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+	  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+	  text-decoration: none;
+	}
+    
+#login_form {
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    right: 30%;
+    bottom: 20%;
+    font-size: 18px;
+}
+
+#f1 {
+    background-color: #ccc;
+    border-style: solid;
+    border-width: 1px;
+}
+.f1_label {
+    white-space: nowrap;
+}
+
+.player {
+    content: '';
+    background:url('player.png')!important;
+    background-size:cover;
+    width: 32px;
+    height: 32px;
+    margin-left:-20px;
+}
+
+.box {
+    content: '';
+    background:url('box.png') !important;;
+    background-size:cover;
+    width: 32px;
+    height: 32px;
+    margin-left:-20px;
+}
+
+.container {
+    content: '';
+    background:url('boxcontainer.png');
+    background-size:cover;
+    width: 32px;
+    height: 32px;
+    margin-left:-20px;
+}
