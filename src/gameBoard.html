@@ -10,7 +10,7 @@
 <div><input class="btn" id="btnEnd" type="button" value="End game" /></div>
 <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
 <script src="http://code.jquery.com/jquery-1.11.1.js"></script>-->
-<div>
+<div id="buttonsHolder">
     <input class="btn" id="btnPrev" type="button" value="Previous level" />
     <input id="txtLevel" type="input" value="1" />
     <input class="btn" id="btnNext" type="button" value="Next level" />
@@ -18,32 +18,34 @@
 <script src="utils.js" type="text/javascript"></script>
 <script type="text/javascript">
     var level_1 = {   
-        "level": 1,
-        "rows": 9,
-        "columns": 8,
-        "playerPosition": { "x": 3, "y": 3},
-        "boxes" : [{"x":2, "y":3},
-                {"x":3, "y":4},
-                {"x":4, "y":4},
-                {"x":6, "y":4},
-                {"x":6, "y":5},
-                {"x":6, "y":1}],
-        "containers": [{"x":2, "y":1},
-                    {"x":3, "y":5},
-                    {"x":4, "y":1},
-                    {"x":5, "y":4},
-                    {"x":6, "y":6},
-                    {"x":7, "y":4}],
-        "walls":[{"x":1, "y":1},
-                {"x":1, "y":2},
-                {"x":3, "y":1},
-                {"x":3, "y":2},
-                {"x":4, "y":2},
-                {"x":4, "y":3},
-                {"x":5, "y":2}]
-    };
-
-    drawField(document.getElementById('fieldContainer'), level_1);
+    "level": 1,
+    "rows": 9,
+    "columns": 8,
+    "playerPosition": { "x": 2, "y": 2},
+    "boxes" : [{"x":2, "y":3},
+              {"x":3, "y":4},
+              {"x":4, "y":4},
+              {"x":6, "y":4},
+              {"x":6, "y":5},
+              {"x":6, "y":3},
+              {"x":6, "y":1}],
+    "containers": [{"x":2, "y":1},
+                {"x":3, "y":5},
+                {"x":4, "y":1},
+                {"x":5, "y":4},
+                {"x":6, "y":6},
+                {"x":6, "y":3},
+                {"x":7, "y":4}],
+    "walls":[{"x":1, "y":1},
+            {"x":1, "y":2},
+            {"x":3, "y":1},
+            {"x":3, "y":2},
+            {"x":4, "y":2},
+            {"x":4, "y":3},
+            {"x":5, "y":2}]
+};
+var currentLevel = level_1;
+drawField(document.getElementById('fieldContainer'), currentLevel);
 
 </script>
 </body>

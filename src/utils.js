@@ -69,6 +69,18 @@
 // 	$('#fieldContainer').html('');
 // });  
 
+
+var checkForVictory = function() {
+	var finishedGame = true;
+	currentLevel.containers.forEach(function (container) {
+		finishedGame &= Box.isABox(container);
+	});
+	
+	if(finishedGame) {
+		alert("Victory !!!");
+	} 	
+};
+
 var Player = {
 	cssClass: 'player',
 	directions : {
@@ -116,11 +128,14 @@ var Player = {
 		
 		if(this.areMovesAllowed(coords)) {
 			if(Box.isABox(coords)) {
-				Box.move(coords, direction);
+				var isBoxMoved = Box.move(coords, direction);
+				isBoxMoved && this.draw(coords); 
+			} else {
+				this.draw(coords);	
 			}
-			
-			this.draw(coords);	
 		}
+		
+		checkForVictory();
 	}
 }
 
@@ -134,6 +149,7 @@ var Box = {
 	areMovesAllowed: function(coords) {
 		var newPosition = document.getElementById(coords.x + '-' + coords.y);
 		return !newPosition.classList.contains('wall') &&
+		       !newPosition.classList.contains('box') &&
 			   !newPosition.classList.contains('player');
 	},
 	isABox: function (coords) {
@@ -159,8 +175,12 @@ var Box = {
 		
 		if(this.areMovesAllowed(newCoords)) {
 			this.remove(coords);
-			this.draw(newCoords);	
+			this.draw(newCoords);
+			
+			return true;	
 		}
+		
+		return false;
 	}
 }
 

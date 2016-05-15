@@ -20,10 +20,6 @@
         background-color: green;
     }
 
-    div.wall {
-        background-color: grey;
-    }
-    
     div.food {
         background-color: red;
     }
@@ -40,11 +36,25 @@
 	  border-radius: 28px;
 	  font-family: Arial;
 	  color: #ffffff;
-	  font-size: 20px;
+	  font-size: 10px;
 	  padding: 10px 20px 10px 20px;
 	  text-decoration: none;
 	}
 
+    #txtLevel {
+      width: 40px
+    }
+
+    #fieldContainer {
+        padding-left: 600;
+        padding-top: 100px;
+    }
+
+    #buttonsHolder {
+       padding-left: 606;
+       padding-top: 20;
+    }
+    
 	.btn:hover {
 	  background: #3cb0fd;
 	  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
@@ -94,6 +104,15 @@
 .container {
     content: '';
     background:url('boxcontainer.png');
+    background-size:cover;
+    width: 32px;
+    height: 32px;
+    margin-left:-20px;
+}
+
+.wall {
+    content: '';
+    background:url('wall.png');
     background-size:cover;
     width: 32px;
     height: 32px;
